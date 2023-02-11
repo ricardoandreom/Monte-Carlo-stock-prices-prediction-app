@@ -41,13 +41,13 @@ st.write('Obtaining and displaying historical data next, we will generate histor
 
 st.markdown("<br>", unsafe_allow_html=True)
 
-st.write("<h3 style='font-size:20px;'>Selecione uma empresa</h3>", unsafe_allow_html=True)
+st.write("<h3 style='font-size:20px;'>Select a company</h3>", unsafe_allow_html=True)
 
-name = st.selectbox('Nome da empresa', list(dict_name_tick.keys()))
+name = st.selectbox('Select a company:', list(dict_name_tick.keys()))
 
 ticker_name = dict_name_tick[name]
 
-st.write(f'Ticker selecionado: {ticker_name}')
+st.write(f'Ticker selected: {ticker_name}')
 
 ticker = yf.Ticker(ticker_name)
 start_date = '2012-01-01'
